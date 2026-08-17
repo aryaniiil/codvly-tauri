@@ -1,0 +1,77 @@
+/* Deploy page — detection banner, provider options, plan. */
+
+.detect {
+  padding: 14px 15px;
+}
+
+.detect-title {
+  font-weight: 500;
+}
+
+.detect-meta {
+  margin-top: 7px;
+  color: var(--muted);
+}
+
+.option-title {
+  font-size: 10px;
+  color: #666b72;
+  letter-spacing: 0.1em;
+  margin: 25px 0 8px;
+  text-transform: uppercase;
+}
+
+.option {
+  min-height: 66px;
+  padding: 13px 14px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  border-radius: var(--r);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.option:hover {
+  border-color: #3c4249;
+}
+
+.option-left {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+}
+
+.option-icon {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--line2);
+  border-radius: var(--r-sm);
+  display: grid;
+  place-items: center;
+  color: #c7cbd0;
+  font-size: 11px;
+  flex: none;
+}
+
+.option-name {
+  font-weight: 500;
+}
+
+.option-desc {
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 3px;
+}
+
+.recommended {
+  color: var(--green);
+  font-size: 10px;
+}
+
+.deploy-footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}

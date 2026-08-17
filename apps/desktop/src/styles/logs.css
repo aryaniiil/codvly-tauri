@@ -1,0 +1,22 @@
+/* Logs page — deployment log lines. */
+
+.logbox {
+  font: 11px/1.8 "SFMono-Regular", Consolas, monospace;
+  padding: 15px;
+  color: #9ea4ab;
+  min-height: 360px;
+  overflow: auto;
+  scrollbar-gutter: stable;
+}
+
+.logline .ok {
+  color: var(--green);
+}
+
+.logline .info {
+  color: var(--blue);
+}
+
+.logline .warn {
+  color: var(--yellow);
+}

@@ -1,0 +1,52 @@
+/* Settings page — section nav and form fields. */
+
+.settings {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 18px;
+}
+
+.settings-nav {
+  border-right: 1px solid var(--line);
+  padding-right: 18px;
+}
+
+.settings-nav div {
+  padding: 9px;
+  color: #8d9298;
+  border-radius: 6px;
+}
+
+.settings-nav div:hover {
+  color: #cfd2d6;
+  cursor: pointer;
+}
+
+.settings-nav div.active {
+  background: #191c1f;
+  color: #eee;
+}
+
+.settings-panel {
+  max-width: 650px;
+}
+
+.field {
+  margin-top: 18px;
+}
+
+.field label {
+  display: block;
+  color: #b9bdc2;
+  margin-bottom: 7px;
+}
+
+.field small {
+  display: block;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+.field .input {
+  max-width: 500px;
+}

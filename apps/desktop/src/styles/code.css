@@ -1,0 +1,290 @@
+/* Code page — explorer, editor, agent panel. Full-bleed inside the shell. */
+
+.content-code {
+  position: relative;
+  max-width: none;
+  padding: 0;
+  overflow: hidden;
+}
+
+.code-layout {
+  display: grid;
+  grid-template-columns: 248px minmax(0, 1fr);
+  height: 100%;
+  background: #0d0f11;
+}
+
+/* ---------- explorer ---------- */
+
+.files {
+  border-right: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.file-title {
+  height: 38px;
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #666b72;
+  border-bottom: 1px solid var(--line);
+}
+
+.file-title .root-name {
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 11px;
+  color: #9ca1a7;
+  max-width: 130px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tree {
+  flex: 1;
+  overflow: auto;
+  scrollbar-gutter: stable;
+  padding: 6px 0 12px;
+}
+
+.tree-row {
+  width: 100%;
+  min-height: 26px;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 0;
+  color: #b9bdc3;
+  font-size: 12.5px;
+  text-align: left;
+}
+
+.tree-row:hover {
+  background: #16181b;
+}
+
+.tree-row.active {
+  background: #1c1f23;
+  color: #eef0f2;
+}
+
+.tree-row.muted {
+  color: var(--faint);
+  font-style: italic;
+}
+
+.twist {
+  color: #6b7077;
+  transition: transform 0.12s ease;
+  flex: none;
+}
+
+.twist.open {
+  transform: rotate(90deg);
+}
+
+.ficon {
+  flex: none;
+  display: block;
+  object-fit: contain;
+}
+
+.tree-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dirty-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #d8b45b;
+  margin-left: auto;
+  flex: none;
+}
+
+.tab .dirty-dot {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+/* ---------- editor ---------- */
+
+.editor {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+}
+
+.tabs {
+  height: 36px;
+  flex: none;
+  display: flex;
+  align-items: stretch;
+  border-bottom: 1px solid var(--line);
+  background: #0b0d0f;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.tabs::-webkit-scrollbar {
+  height: 0;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 9px;
+  border-right: 1px solid var(--line);
+  border-top: 1px solid transparent;
+  color: #9a9fa6;
+  font-size: 12.5px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.tab:hover {
+  color: #d6d9dc;
+}
+
+.tab.active {
+  background: #0d0f11;
+  color: #eef0f2;
+  border-top-color: #78a9ff;
+}
+
+.tab-close {
+  background: transparent;
+  border: 0;
+  color: #7a7f85;
+  display: grid;
+  place-items: center;
+  padding: 2px;
+  border-radius: 4px;
+}
+
+.tab-close:hover {
+  background: #26292d;
+  color: #eef0f2;
+}
+
+.tabs-empty {
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  color: var(--faint);
+  font-size: 12px;
+}
+
+.editor-host-wrap {
+  flex: 1;
+  min-height: 0;
+  position: relative;
+}
+
+.cm-host {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.editor-empty,
+.editor-blocked {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--faint);
+}
+
+.editor-empty p,
+.editor-blocked p {
+  margin: 0;
+  font-size: 12.5px;
+}
+
+.preview {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: #0a0c0e;
+}
+
+.preview img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.preview video {
+  max-width: 100%;
+  max-height: 100%;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #000;
+}
+
+.statusbar {
+  height: 26px;
+  flex: none;
+  border-top: 1px solid var(--line);
+  background: #0b0d0f;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* ---------- no folder state ---------- */
+
+.empty-folder {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.empty-folder h2 {
+  margin: 0;
+  font-size: 17px;
+  color: var(--text);
+}
+
+.empty-folder p {
+  margin: 0;
+  max-width: 340px;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .code-layout {
+    grid-template-columns: 180px 1fr;
+  }
+}

@@ -1,0 +1,91 @@
+/* Overview page — header, stat cards, lists. */
+
+.page-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 23px;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.stat {
+  padding: 16px 17px;
+  min-height: 88px;
+}
+
+.stat-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.stat-title {
+  font-weight: 520;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  color: var(--muted);
+  background: #12161b;
+  border: 1px solid var(--line);
+  padding: 3px 9px;
+  border-radius: 20px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: var(--green);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.provider {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.section {
+  margin-top: 29px;
+}
+
+.section-label {
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  margin-bottom: 9px;
+}
+
+.check {
+  color: var(--green);
+  flex: none;
+}
+
+.tag {
+  color: #a2a7ad;
+  font-size: 10.5px;
+  background: #161a1d;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 3px 8px;
+}
+
+.time {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+@media (max-width: 900px) {
+  .grid3 {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,61 @@
+/* Boot splash — shown briefly while the workspace initializes. */
+
+.screen {
+  position: absolute;
+  inset: 0;
+}
+
+.boot {
+  display: grid;
+  place-items: center;
+  background: #090a0c;
+}
+
+.boot-inner {
+  width: 280px;
+  text-align: center;
+}
+
+.boot .logo {
+  width: 46px;
+  height: 46px;
+  display: block;
+  margin: 0 auto 18px;
+  filter: drop-shadow(0 0 18px rgba(119, 99, 233, 0.16));
+}
+
+.boot-name {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.boot-status {
+  margin-top: 9px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.progress {
+  height: 2px;
+  background: #1d2023;
+  margin-top: 22px;
+  overflow: hidden;
+}
+
+.progress i {
+  display: block;
+  width: 40%;
+  height: 100%;
+  background: #cfd1d3;
+  animation: load 1.4s infinite;
+}
+
+@keyframes load {
+  from {
+    transform: translateX(-120%);
+  }
+  to {
+    transform: translateX(350%);
+  }
+}

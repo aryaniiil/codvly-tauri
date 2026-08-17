@@ -1,0 +1,48 @@
+/* Floating project agent panel. */
+
+.ai-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 420px;
+  background: #111315;
+  border: 1px solid #34383d;
+  border-radius: var(--r-lg);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.55);
+  z-index: 15;
+}
+
+.ai-float-head {
+  height: 42px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 13px;
+}
+
+.ai-float-body {
+  padding: 14px;
+}
+
+.ai-blurb {
+  color: #bfc3c8;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.ai-prompt {
+  padding: 11px;
+  border: 1px solid var(--line);
+  background: #0c0e10;
+  border-radius: var(--r-sm);
+  color: #777d84;
+  margin-top: 12px;
+}
+
+.ai-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 7px;
+  margin-top: 12px;
+}

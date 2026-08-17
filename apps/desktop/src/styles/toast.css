@@ -1,0 +1,25 @@
+/* Toast notifications. */
+
+.toast {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #171a1d;
+  border: 1px solid #363a40;
+  padding: 10px 13px;
+  border-radius: 10px;
+  z-index: 30;
+  color: #cfd2d6;
+  animation: toast-in 0.15s ease-out;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
